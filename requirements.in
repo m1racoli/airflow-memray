@@ -1,0 +1,4 @@
+-e airflow-memray @ .
+apache-airflow~=2.9.3
+mypy~=1.11
+pytest~=7.4

@@ -1,0 +1,139 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airflow-memray"
+authors = [
+    { name = "Cedrik Neumann", email = "7921017+m1racoli@users.noreply.github.com" },
+]
+license = { text = "Apache License 2.0" }
+description = "Memory profiling for Airflow with Memray."
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Apache Airflow :: Provider",
+    "Framework :: Apache Airflow",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3",
+]
+dynamic = [
+    "version",
+]
+requires-python = "~=3.11"
+dependencies = [
+    "apache-airflow>=2.9",
+    "memray~=1.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/m1racoli/airflow-memray/"
+Source = "https://github.com/m1racoli/airflow-memray/"
+Documentation = "https://github.com/m1racoli/airflow-memray/"
+Changelog = "https://github.com/m1racoli/airflow-memray/blob/main/CHANGELOG.md"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.entry-points.apache_airflow_provider]
+provider_info = "airflow_memray.__init__:get_provider_info"
+
+[project.entry-points."airflow.plugins"]
+memray_plugin = "airflow_memray.plugin:MemrayPlugin"
+
+[project.entry-points."airflow.policy"]
+_ = 'airflow_memray.policies'
+
+[tool.black]
+line-length = 110
+target-version = ["py311"]
+
+[tool.commitizen]
+annotated_tag = true
+bump_message = "bump: version $current_version → $new_version [skip-ci]"
+gpg_sign = true
+major_version_zero = true
+version = "0.0.0"
+version_files = [
+    "airflow_memray/__init__.py",
+]
+
+[tool.mypy]
+packages = "airflow_memray"
+ignore_missing_imports = true
+python_version = "3.11"
+show_error_codes = true
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+extend-select = [
+    "A",   # flake8-builtins
+    "B",   # flake8-bugbear
+    "C",   # flake8-comprehensions
+    "C90", # Complexity
+    "I",   # isort
+    "ISC", # flake8-implicit-str-concat
+    "T10", # flake8-debugger
+    "UP",  # pyupgrade
+    "W",   # pycodestyle warnings
+]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = { attr = "airflow_memray.__version__" }
+
+[tool.setuptools.packages.find]
+exclude = [
+    "*tests.*",
+    "*tests",
+]
+
+[tool.towncrier]
+directory = "changelog.d"
+filename = "CHANGELOG.md"
+issue_format = "[#{issue}](https://github.com/m1racoli/airflow-memray/issues/{issue})"
+name = "airflow-memray"
+package = "airflow_memray"
+start_string = "<!-- towncrier release notes start -->\n"
+title_format = "## [{version}](https://github.com/twisted/my-project/tree/{version}) - {project_date}"
+underlines = ["", "", ""]
+
+[[tool.towncrier.type]]
+directory = "security"
+name = "Security"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "removed"
+name = "Removed"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "deprecated"
+name = "Deprecated"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "added"
+name = "Added"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "changed"
+name = "Changed"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "fixed"
+name = "Fixed"
+showcontent = true

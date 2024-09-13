@@ -1,0 +1,12 @@
+# Ignore everything
+**
+
+!airflow_memray/
+!dags/
+!include/
+!plugins/
+
+!pyproject.toml
+!requirements.txt
+
+**/__pycache__/
