@@ -7,3 +7,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 This project uses [*towncrier*](https://towncrier.readthedocs.io/) and the changes for the upcoming release can be found in <https://github.com/m1racoli/airflow-memray/tree/main/changelog.d/>.
 
 <!-- towncrier release notes start -->
+
+## [0.1.0](https://github.com/twisted/my-project/tree/0.1.0) - 2024-09-13
+
+### Added
+
+- Profile tasks with Memray and make results accessible in the UI. ([#1](https://github.com/m1racoli/airflow-memray/issues/1))

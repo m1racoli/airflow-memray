@@ -58,7 +58,7 @@ annotated_tag = true
 bump_message = "bump: version $current_version → $new_version [skip-ci]"
 gpg_sign = true
 major_version_zero = true
-version = "0.0.0"
+version = "0.1.0"
 version_files = [
     "airflow_memray/__init__.py",
 ]
