@@ -8,7 +8,7 @@ This project uses [*towncrier*](https://towncrier.readthedocs.io/) and the chang
 
 <!-- towncrier release notes start -->
 
-## [0.1.0](https://github.com/twisted/my-project/tree/0.1.0) - 2024-09-13
+## [0.1.0](https://github.com/m1racoli/airflow-memray/tree/0.1.0) - 2024-09-13
 
 ### Added
 

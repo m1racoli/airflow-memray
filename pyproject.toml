@@ -105,7 +105,7 @@ issue_format = "[#{issue}](https://github.com/m1racoli/airflow-memray/issues/{is
 name = "airflow-memray"
 package = "airflow_memray"
 start_string = "<!-- towncrier release notes start -->\n"
-title_format = "## [{version}](https://github.com/twisted/my-project/tree/{version}) - {project_date}"
+title_format = "## [{version}](https://github.com/m1racoli/airflow-memray/tree/{version}) - {project_date}"
 underlines = ["", "", ""]
 
 [[tool.towncrier.type]]
