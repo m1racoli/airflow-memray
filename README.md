@@ -10,3 +10,11 @@
 [![image](https://img.shields.io/pypi/pyversions/airflow-memray.svg)](https://pypi.python.org/pypi/airflow-memray)
 
 Memory profiling for Airflow with [Memray](https://bloomberg.github.io/memray/).
+
+## Airflow Summit 2024
+
+I have given a presentation about this package at Airflow Summit 2024.
+
+You can visit the [official page of the presentation](https://airflowsummit.org/sessions/2024/profiling-airflow-tasks-with-memray/) or directly watch video on YouTube by clicking on the following picture:
+
+[![Profiling Airflow tasks with Memray](https://img.youtube.com/vi/QHLedv-j8Hc/0.jpg)](https://www.youtube.com/watch?v=QHLedv-j8Hc)
