@@ -11,6 +11,8 @@
 
 Memory profiling for Airflow with [Memray](https://bloomberg.github.io/memray/).
 
+## Usage
+
 ## Configuration Reference
 
 This section contains the list of all the available Airflow Memray configurations that you can set in `airflow.cfg` file or using environment variables.
