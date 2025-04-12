@@ -8,6 +8,14 @@ This project uses [*towncrier*](https://towncrier.readthedocs.io/) and the chang
 
 <!-- towncrier release notes start -->
 
+## [0.1.1](https://github.com/m1racoli/airflow-memray/tree/0.1.1) - 2025-04-11
+
+### Fixed
+
+- Fix Github action for publishing to PyPI by first building the project before uploading. ([#3](https://github.com/m1racoli/airflow-memray/issues/3))
+- Fixed an issue where Jinja2 templating and other BaseOperator functionalities did not work properly. ([#7](https://github.com/m1racoli/airflow-memray/issues/7))
+
+
 ## [0.1.0](https://github.com/m1racoli/airflow-memray/tree/0.1.0) - 2024-09-13
 
 ### Added
