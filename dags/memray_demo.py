@@ -1,6 +1,7 @@
 from time import sleep
 
 from airflow.decorators import dag, task
+from airflow.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
@@ -46,6 +47,11 @@ def memray_demo():
     PythonOperator(
         task_id="memray_classic",
         python_callable=run,
+    )
+
+    BashOperator(
+        task_id="memray_bash",
+        bash_command='echo "ti_key={{ task_instance_key_str }}"',
     )
 
 
